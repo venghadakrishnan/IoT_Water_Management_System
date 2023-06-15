@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type = "text/css" href="./css/status.css">
+    <link rel="stylesheet" type = "text/css" href="./css/style.css">
+    <title>Gallery</title>
+</head>
+<body>
+
+
+    <header>
+        <a href="#" class = "brand">FC</a>
+        <div class="navigation">
+            <div class = "navigation-items">
+                <a href="./index.html">Home</a>
+                <a href="./about.html">About</a>
+                <a href="./Status.html">Status</a>
+                <a href="#">Contect</a>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="status_container">
+        <div class="status_box">
+            <div class="title">
+                <h1>Here is your Tank Status</h1>
+            </div>
+
+            <div class="content-section">
+
+                <div class="content">
+                    <h1>To Start the Serivices</h1>
+                    <a href="http://localhost:8081/admin/start" class="button1" onclick="showResponse(1)">Click here</a>
+                </div>
+                <div class="content">
+                    <h1>Service Status</h1>
+                    <a href="http://localhost:8081/admin/status" class="button2" onclick="showResponse(2)">Click here</a>
+                </div>
+                <div class="content">
+                    <h1>Recent Water Status</h1>
+                    <a href="http://localhost:8081/data/recent?recordcount=5" class="button4" onclick="showResponse(4)">Click here</a>
+                </div>
+                <div class="content">
+                    <h1>Water Level of Today date From specific timming</h1>
+                    <a href="http://localhost:8081/data/todayfromtime?hour=11&minutes=10&seconds=10" class="button5" onclick="showResponse(5)">Click here</a>
+                </div>
+                <div class="content">
+                    <h1>Todays Water Level</h1>
+                    <a href="http://localhost:8081/data/today" class="button6" onclick="showResponse(6)">Click here</a>
+                </div>
+                <div class="content">
+                    <h1>All data</h1>
+                    <a href="http://localhost:8081/data/all" class="button7" onclick="showResponse(7)">Click here</a>
+                </div>
+                <div class="content">
+                    <h1>Stop the Services</h1>
+                    <a href="http://localhost:8081/admin/stop" class="button8" onclick="showResponse(8)">Click here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>

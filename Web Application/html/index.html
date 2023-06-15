@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Management System</title>
+    <link rel="stylesheet" type = "text/css" href="./css/style.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="#" class = "brand">FC</a>
+        <div class="navigation">
+            <div class = "navigation-items">
+                <a href="#">Home</a>
+                <a href="./about.html">About</a>
+                <a href="./Status.html">Status</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+
+        <video class = "video-slide" src="./vedio/one.mp4" autoplay muted loop></video>
+        <video class = "video-slide" src="./vedio/three.mp4" autoplay muted loop></video>
+        <video class = "video-slide" src="./vedio/two.mp4" autoplay muted loop></video>
+        <video class = "video-slide" src="./vedio/four.mp4" autoplay muted loop></video>
+        <video class = "video-slide" src="./vedio/five.mp4" autoplay muted loop></video>
+       
+            <div class="content active">
+                <h1>WATER MANAGEMENT.<br><span>SYSTEM</span></h1>
+                <p>Water management helps in developing efficient irrigation practices for the betterment of agriculture in the country. 
+                    Proper utilization of water in our homes too can save this precious resource. 
+                    Water management teaches us to use a limited amount of water whenever required.
+                    Water scarcity affects more than 40% of the global population. 
+                    Water-related disasters account for 70% of all deaths related to natural disasters. 
+                    The World Bank helps countries ensure sustainability of water use, 
+                    build climate resilience and strengthen integrated management.</p>
+            </div>
+
+
+            <div class="content">
+                <h1>SAVE<br><span>WATER</span></h1>
+                <p>Conserving water reduces wear and tear on major resources such as water and wastewater treatment plants and the distribution systems that deliver water to the public.
+                    Using less water can also enable us to become more flexible during times when there is a water shortage.
+                    Humans are not the only species on Earth that requires water for survival. In fact, every species on this planet needs water to live and survive. Without water, the aquatic life will stand no chance of survival. 
+                    It is highly important that we save water that is essential to our sustainability. By practicing basic water conservation tips,
+                    we can save marine life, help quality food produce grow and save many other species.
+                    Keeping our water supply safe and pure will protect the water for the generations to come
+                    Whether you are on a municipal or a private domestic water supply, water conservation is a wise practice.</p>
+            </div>
+
+    
+            <div class="content">
+                <h1>REUSE WATER<br><span>SYSTEM</span></h1>
+                <p>Wastewater reuse or water recycling is is the use of treated wastewater (or untreated wastewater) for a beneficial purpose. 
+                    One of the key advantages of recycling water is to protect water resources by reducing water pollution discharges and the need for water to be removed from natural habits
+                    Water reuse (also commonly known as water recycling or water reclamation) reclaims water from a variety of sources then treats and reuses it for beneficial purposes such as
+                    agriculture and irrigation, potable water supplies, groundwater replenishment, industrial processes, and environmental restoration,
+                    Reuse is the second preferred waste management option after waste reduction. 
+                    Reuse is the practice of using a material over and over again in its current form.
+                    The essence of reuse is that it preserves some or all of the energy and materials that went into making an item.
+                </p>
+
+                
+            </div>
+
+            <div class="content">
+                <h1>LACK OF<br><span>WATER</span></h1>
+                <p>
+                    Over two billion people live in countries where water supply is inadequate. 
+                    Half of the world's population could be living in areas facing water scarcity by as early as 2025,
+                    771 million people lack access to clean water. 
+                    That's 1 in 10 people on the planet. Women and girls spend an estimated 200 million hours carrying water every day.
+                    sewage systems can fail and the threat of contracting diseases like cholera surges. Scarce water also becomes more expensive.
+                    There are two types of water scarcity: physical water scarcity and economic water scarcity.
+                    Physical water scarcity is where there is not enough water to meet all demands, including that needed for ecosystems to function.
+                    Increased human consumption. Overuse and wastage of water.
+                    A global rise in freshwater demand. Overuse of aquifers and its consequent slow recharge.
+                </p>
+                
+            </div>
+
+            <div class="content">
+                <h1>WATER<br><span>POLLUTION</span></h1>
+                <p>
+                    Water pollution occurs when harmful substances—often chemicals or microorganisms—contaminate a stream, river, lake, 
+                    ocean, aquifer, or other body of water, degrading water quality and rendering it toxic to humans or the environment.
+                    Big spills may dominate headlines, but consumers account for the vast majority of oil pollution in our seas,
+                    Moreover, nearly half of the estimated 1 million tons of oil that makes its way into marine environments each
+                    year comes not from tanker spills but from land-based sources such as factories, farms, and cities. At sea, tanker spills account
+                    for about 10 percent of the oil in waters around the world, while regular operations of the shipping industry—through both
+                    legal and illegal discharges—contribute about one-third. Oil is also naturally released from under the ocean floor through fractures known as seeps.
+                </p>
+                <!-- <a href="#">Read more</a> -->
+            </div>
+
+            <div class="slider-navigation">
+                <div class="nav-btn active"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+            </div>
+
+    </section>
+
+
+    
+
+    <!-- Javascript -->
+
+    <script>
+
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+
+        var sliderNav = function(manual){
+
+            btns.forEach((btn) =>{
+                btn.classList.remove("active");
+            });
+
+            slides.forEach((slide) =>{
+                slide.classList.remove("active");
+            });
+
+            contents.forEach((content) =>{
+                content.classList.remove("active");
+            });
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i);
+            
+        });
+    });
+
+    </script>
+
+</body>
+</html>
